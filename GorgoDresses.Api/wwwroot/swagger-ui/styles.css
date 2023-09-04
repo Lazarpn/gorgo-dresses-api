@@ -1,0 +1,15 @@
+﻿.swagger-ui .response-col_description {
+    max-width: 500px;
+}
+
+.auth-container input {
+    width: 100%;
+}
+
+.swagger-ui a.nostyle {
+    user-select: text;
+}
+
+.view-line-link.copy-to-clipboard {
+    display: none;
+}
