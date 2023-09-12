@@ -20,7 +20,6 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Linq.Expressions;
 using System.Security.Claims;
 using System.Text;
-using CaloriesTracking.Common.Models.User;
 
 namespace GorgoDresses.Core;
 

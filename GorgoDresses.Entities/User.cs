@@ -19,9 +19,6 @@ public class User : IdentityUser<Guid>
     [MaxLength(100)]
     public string LastName { get; set; }
 
-    [Range(0, 20000)]
-    public int CaloriesPreference { get; set; }
-
     [MaxLength(50)]
     public string FileName { get; set; }
 

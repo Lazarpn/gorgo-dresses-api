@@ -61,8 +61,7 @@ try
     builder.Services.AddScoped<AccountManager>();
     builder.Services.AddScoped<UserActivityManager>();
     builder.Services.AddScoped<DressManager>();
-
-
+    builder.Services.AddScoped<FileManager>();
 
     logger.Info("App: Configuring forwarded headers");
     builder.Services.Configure<ForwardedHeadersOptions>(options =>
@@ -128,7 +127,7 @@ try
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen(options =>
     {
-        options.SwaggerDoc("v1", new OpenApiInfo { Title = "CaloriesTracking API", Version = "v1" });
+        options.SwaggerDoc("v1", new OpenApiInfo { Title = "GorgoDresses API", Version = "v1" });
         options.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
         {
             In = ParameterLocation.Header,
@@ -177,7 +176,7 @@ try
         app.UseSwagger();
         app.UseSwaggerUI(uiOptions =>
         {
-            uiOptions.SwaggerEndpoint("/swagger/v1/swagger.json", "CalorieseTracking API V1");
+            uiOptions.SwaggerEndpoint("/swagger/v1/swagger.json", "GorgoDresses API V1");
             uiOptions.InjectStylesheet("/swagger-ui/styles.css");
         });
     }

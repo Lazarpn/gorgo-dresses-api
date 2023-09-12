@@ -4,6 +4,7 @@ using GorgoDresses.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GorgoDresses.Data.Migrations
 {
     [DbContext(typeof(GorgoDressesDbContext))]
-    partial class GorgoDressesDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230904173259_PropertyTypeChange")]
+    partial class PropertyTypeChange
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -27,10 +30,6 @@ namespace GorgoDresses.Data.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Brand")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
 
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
@@ -56,10 +55,6 @@ namespace GorgoDresses.Data.Migrations
 
                     b.Property<int>("SellingPrice")
                         .HasColumnType("int");
-
-                    b.Property<string>("ThumbUrl")
-                        .HasMaxLength(1000)
-                        .HasColumnType("nvarchar(1000)");
 
                     b.Property<string>("Type")
                         .HasMaxLength(50)

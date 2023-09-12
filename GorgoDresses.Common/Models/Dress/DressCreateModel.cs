@@ -15,11 +15,14 @@ public class DressCreateModel
     [MaxLength(50)]
     public string Type { get; set; }
 
-    [Range(0, 100000)]
-    public string RentingPrice { get; set; }
+    [MaxLength(50)]
+    public string Brand { get; set; }
 
     [Range(0, 100000)]
-    public string SellingPrice { get; set; }
+    public int RentingPrice { get; set; }
+
+    [Range(0, 100000)]
+    public int SellingPrice { get; set; }
 
     public DateTime Date { get; set; } = DateTime.Now;
 

@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CaloriesTracking.Common.Models.User;
+namespace GorgoDresses.Common.Models.User;
 public class ChangeEmailModel
 {
-    public string NewEmail { get; set; }
+    public string NewEmail { get; set; }    
 }

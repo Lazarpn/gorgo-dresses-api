@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace GorgoDresses.Common.Models.Dress;
-public class DressModel
+public class DressBasicInfoModel
 {
     public Guid Id { get; set; }
 
@@ -15,12 +15,6 @@ public class DressModel
 
     [MaxLength(50)]
     public string Type { get; set; }
-
-    [Range(0, 100000)]
-    public int RentingPrice { get; set; }
-
-    [Range(0, 100000)]
-    public int SellingPrice { get; set; }
 
     public DateTime Date { get; set; }
 

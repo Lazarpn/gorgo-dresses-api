@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CaloriesTracking.Common.Models.User;
+namespace GorgoDresses.Common.Models.User;
 public class ResentEmailResponseModel
 {
     public DateTime NewCodeExpiryDate { get; set; }

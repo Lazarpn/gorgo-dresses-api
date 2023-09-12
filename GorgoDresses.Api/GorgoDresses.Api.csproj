@@ -13,13 +13,6 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<Compile Remove="Logs\**" />
-		<Content Remove="Logs\**" />
-		<EmbeddedResource Remove="Logs\**" />
-		<None Remove="Logs\**" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<Content Remove="web.config" />
 		<None Include="web.config" />
 	</ItemGroup>
@@ -53,5 +46,9 @@
 		<Content Update="nlog.config">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Logs\" />
 	</ItemGroup>
 </Project>

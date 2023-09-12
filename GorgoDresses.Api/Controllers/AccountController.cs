@@ -1,4 +1,3 @@
-using CaloriesTracking.Common.Models.User;
 using GorgoDresses.Common.Helpers;
 using GorgoDresses.Common.Models.User;
 using GorgoDresses.Core;
